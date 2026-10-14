@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Meenakshi (Meenu) &#128149;</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="adwaitlogo.jpg" type="image/jpg">
+</head>
+<body>
+    <div class="particles" id="particles" aria-hidden="true"></div>
+    <audio id="backgroundMusic" src="Apna-Chehra-Dikha.mp3" loop preload="metadata"></audio>
+    <div class="birthday-gate" id="birthdayGate">
+        <section class="birthday-gate-card" role="dialog" aria-modal="true" aria-labelledby="birthdayGateTitle">
+            <p class="eyebrow">A birthday surprise for Meenu</p>
+            <h1 id="birthdayGateTitle" tabindex="-1">The surprise is waiting!</h1>
+            <div id="birthdayCountdown" class="birthday-countdown" role="timer" aria-label="Countdown to Meenu's birthday">
+                <div><strong id="countdownDays">0</strong><span>Days</span></div>
+                <div><strong id="countdownHours">00</strong><span>Hours</span></div>
+                <div><strong id="countdownMinutes">00</strong><span>Minutes</span></div>
+                <div><strong id="countdownSeconds">00</strong><span>Seconds</span></div>
+            </div>
+            <p class="birthday-gate-note" id="birthdayGateNote">Meenu's birthday surprise unlocks on 17 October.</p>
+            <form id="birthdayPasswordForm" class="birthday-password-form" hidden>
+                <label for="birthdayPassword">Enter your birthday date</label>
+                <input id="birthdayPassword" name="birthdayPassword" type="password" inputmode="numeric" autocomplete="off" maxlength="2" pattern="[0-9]{2}" placeholder="DD" required>
+                <button class="cta-button" type="submit">Open My Surprise</button>
+                <p class="birthday-password-status" id="birthdayPasswordStatus" aria-live="polite"></p>
+            </form>
+        </section>
+    </div>
+
+    <section class="hero" id="hero">
+        <div class="hero-photo-stage" aria-hidden="true">
+            <img class="hero-photo hero-photo-one" src="IMG_7737.PNG" alt="">
+            <img class="hero-photo hero-photo-two" src="IMG_1433.JPG.jpeg" alt="">
+            <img class="hero-photo hero-photo-three" src="WhatsApp%20Image%202026-09-30%20at%208.42.10%20PM.jpeg" alt="">
+        </div>
+        <div class="hero-content">
+            <p class="eyebrow">A birthday surprise made for Meenakshi (Meenu)</p>
+            <h1 class="typewriter">Happy Birthday, Meenu!</h1>
+            <p class="subtitle">Today is all about you, your smile, and every little moment that became our favorite story.</p>
+            <div class="floating-hearts" aria-hidden="true">
+                <span class="heart">&#10084;&#65039;</span><span class="heart">&#128150;</span>
+                <span class="heart">&#128149;</span><span class="heart">&#128151;</span>
+                <span class="heart">&#10024;</span>
+            </div>
+            <div class="hero-actions">
+                <button class="cta-button" onclick="scrollToSection('gallery')">Start the Celebration &#127881;</button>
+                <button class="feature-button" onclick="scrollToSection('cake')">Cut the Birthday Cake</button>
+                <button class="feature-button" id="openCoupon" type="button">Open Your Coupon</button>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true"><div class="scroll-arrow"></div></div>
+    </section>
+
+    <section class="cake-section" id="cake">
+        <div class="container cake-content">
+            <p class="eyebrow">Make a birthday wish</p>
+            <h2 class="section-title visible">Time to Cut the Cake!</h2>
+            <div class="cake-scene" id="cakeScene" aria-hidden="true">
+                <div class="cake">
+                    <div class="cake-tier cake-tier-top">
+                        <span class="cake-half cake-half-left"></span>
+                        <span class="cake-half cake-half-right"></span>
+                    </div>
+                    <div class="cake-tier cake-tier-bottom">
+                        <span class="cake-half cake-half-left"></span>
+                        <span class="cake-half cake-half-right"></span>
+                    </div>
+                    <div class="cake-base"></div>
+                    <div class="cake-candle"><span class="candle-flame"></span></div>
+                </div>
+                <div class="cake-knife"></div>
+                <div class="cake-plate"></div>
+            </div>
+            <p class="cake-status" id="cakeStatus" aria-live="polite">Make a wish, then tap the button!</p>
+            <button class="cta-button cake-cut-button" id="cutCake" type="button">Cut the Cake &#127874;</button>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Beautiful Memories</h2>
+            <div class="gallery-grid">
+                <article class="photo-card" data-reveal data-delay="100">
+                    <div class="photo-container">
+                        <img src="IMG_1085.PNG" alt="A beautiful birthday memory">
+                        <div class="photo-overlay"><p>That one smile I never get tired of</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card tall-card" data-reveal data-delay="180">
+                    <div class="photo-container">
+                        <img src="IMG_1480.PNG" alt="A sweet memory together">
+                        <div class="photo-overlay"><p>Tiny moments, biggest happiness</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card" data-reveal data-delay="260">
+                    <div class="photo-container">
+                        <img src="IMG_2315.PNG" alt="A happy birthday memory">
+                        <div class="photo-overlay"><p>Every frame feels warmer with you</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card tall-card" data-reveal data-delay="340">
+                    <div class="photo-container">
+                        <img src="IMG_2257.PNG" alt="A romantic birthday memory">
+                        <div class="photo-overlay"><p>My favorite person, always</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card" data-reveal data-delay="420">
+                    <div class="photo-container">
+                        <img src="IMG_1873.PNG" alt="A lovely memory">
+                        <div class="photo-overlay"><p>A page from our little forever</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card" data-reveal data-delay="500">
+                    <div class="photo-container">
+                        <img src="IMG_2761.PNG" alt="A memorable day">
+                        <div class="photo-overlay"><p>More memories, more reasons to smile</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card" data-reveal data-delay="580">
+                    <div class="photo-container">
+                        <img src="Meenu-Memory-1.jpeg" alt="Meenu and a special someone sharing a sunny outdoor memory">
+                        <div class="photo-overlay"><p>A sunny day, a memory to keep</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card" data-reveal data-delay="660">
+                    <div class="photo-container">
+                        <img src="Meenu-Memory-2.jpeg" alt="Meenu and a special someone smiling together outdoors">
+                        <div class="photo-overlay"><p>Your smile makes this moment brighter</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card" data-reveal data-delay="740">
+                    <div class="photo-container">
+                        <img src="Meenu-Memory-3.jpeg" alt="Meenu and a special someone enjoying a day out">
+                        <div class="photo-overlay"><p>One more beautiful day together</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card" data-reveal data-delay="820">
+                    <div class="photo-container">
+                        <img src="Meenu-Memory-4.jpeg" alt="Meenu and a special someone celebrating a happy memory">
+                        <div class="photo-overlay"><p>A little celebration, a lasting memory</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+                <article class="photo-card" data-reveal data-delay="900">
+                    <div class="photo-container">
+                        <img src="Meenu-Memory-5.jpeg" alt="Meenu and a special someone enjoying the sunshine">
+                        <div class="photo-overlay"><p>Keeping this happy moment close</p><button class="like-btn" onclick="toggleLike(event, this)" aria-label="Like this memory">&#9825;</button></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="reel-section">
+        <div class="container">
+            <h2 class="section-title">Birthday Memory Reel</h2>
+            <div class="memory-reel" aria-label="Animated memory reel">
+                <div class="reel-track">
+                    <img src="IMG_1641.PNG" alt="Memory reel photo"><img src="IMG_2250.PNG" alt="Memory reel photo">
+                    <img src="IMG_7737.PNG" alt="Memory reel photo"><img src="IMG_1433.JPG.jpeg" alt="Memory reel photo">
+                    <img src="WhatsApp%20Image%202026-09-30%20at%208.42.10%20PM.jpeg" alt="Memory reel photo">
+                    <img src="Meenu-Memory-1.jpeg" alt="Outdoor memory with Meenu"><img src="Meenu-Memory-2.jpeg" alt="Smiling memory with Meenu">
+                    <img src="Meenu-Memory-3.jpeg" alt="Day out memory with Meenu"><img src="Meenu-Memory-4.jpeg" alt="Celebration memory with Meenu">
+                    <img src="Meenu-Memory-5.jpeg" alt="Sunny memory with Meenu">
+                    <img src="IMG_1641.PNG" alt="Memory reel photo"><img src="IMG_2250.PNG" alt="Memory reel photo">
+                    <img src="IMG_7737.PNG" alt="Memory reel photo"><img src="IMG_1433.JPG.jpeg" alt="Memory reel photo">
+                    <img src="WhatsApp%20Image%202026-09-30%20at%208.42.10%20PM.jpeg" alt="Memory reel photo">
+                    <img src="Meenu-Memory-1.jpeg" alt="Outdoor memory with Meenu"><img src="Meenu-Memory-2.jpeg" alt="Smiling memory with Meenu">
+                    <img src="Meenu-Memory-3.jpeg" alt="Day out memory with Meenu"><img src="Meenu-Memory-4.jpeg" alt="Celebration memory with Meenu">
+                    <img src="Meenu-Memory-5.jpeg" alt="Sunny memory with Meenu">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Little Moving Memories</h2>
+            <div class="video-grid">
+                <video src="IMG_1477.MP4" controls muted preload="metadata"></video>
+                <video src="IMG_2759.MP4" controls muted preload="metadata"></video>
+                <video src="IMG_1475.MOV" controls muted preload="metadata"></video>
+                <video src="Meenu-Memory-Video-1.mp4" controls muted preload="metadata" aria-label="A special video memory with Meenu"></video>
+                <video src="Meenu-Memory-Video-2.mp4" controls muted preload="metadata" aria-label="Another happy video memory with Meenu"></video>
+                <video src="Meenu-Memory-Video-3.mp4" controls muted preload="metadata" aria-label="A lovely day-out video memory"></video>
+                <video src="Meenu-Memory-Video-4.mp4" controls muted preload="metadata" aria-label="A birthday celebration video memory"></video>
+            </div>
+        </div>
+    </section>
+
+    <section class="message-section" lang="hi-Latn">
+        <div class="container">
+            <div class="message-card" data-reveal>
+                <h2>Meri Pyari Meenu Ke Liye</h2>
+                <p class="message-text">Meenu, pichhle teen saalon mein tumne mera jitna saath diya, mujhe jitna pyaar aur apnapan diya, uske liye main dil se hamesha tumhara shukraguzaar rahunga. Tumhari parwah, tumhara bharosa aur tumhara saath mere liye bahut maayne rakhta hai. Hamari saath bitayi hui chhoti-badi har yaad mere dil ke kareeb rahegi.</p>
+                <p class="message-text">Hamari shaadi nahi hui, lekin iska matlab yeh nahi ki tumhari jagah mere dil mein kam ho jaati hai. Tum meri zindagi ka ek bahut khaas hissa ho, aur tumhare liye mera pyaar, care aur izzat hamesha rahegi. Main tumhare liye dil se achha hi chahunga, aur tumhari khushi aur tumhare faislon ki izzat karunga.</p>
+                <p class="message-text">Agar kabhi tumhe meri zaroorat ho aur tum mujhse baat karna chaho, toh main bina kisi shart ya umeed ke tumhari baat sunne aur tumhara saath dene ke liye rahunga. Tum par koi pressure nahi—bas itna chahta hoon ki tum hamesha khush, mehfooz aur muskurati raho.</p>
+                <p class="message-signature">Janamdin mubarak ho, meri Meenu. Tumhari yaadein aur tumhare liye mera pyaar mere dil mein hamesha khaas rahenge. I love you, Meenu. &#128149;</p>
+                <div class="message-hearts" aria-hidden="true"><span>&#128150;</span><span>&#128149;</span><span>&#128151;</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer><div class="container">Made with &#10084;&#65039; for the most amazing person in the world.</div></footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Memory preview">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">&times;</button>
+        <img id="lightboxImage" src="" alt=""><p id="lightboxCaption"></p>
+    </div>
+    <div class="coupon-overlay" id="couponScreen" hidden>
+        <section class="coupon-card" role="dialog" aria-modal="true" aria-labelledby="couponTitle" aria-describedby="couponDescription">
+            <button class="coupon-close" id="closeCoupon" type="button" aria-label="Close coupon">&times;</button>
+            <p class="eyebrow">A little something, just for you</p>
+            <div class="coupon-heart" aria-hidden="true">&#128149;</div>
+            <h2 id="couponTitle">Meenu's Birthday Coupon</h2>
+            <p class="coupon-gift" id="couponDescription">Good for one big hug and one birthday kiss &#128139;</p>
+            <p class="coupon-note">No expiry. Redeem whenever you need a little extra love.</p>
+            <button class="cta-button redeem-button" id="redeemCoupon" type="button">Redeem My Coupon</button>
+            <p class="coupon-status" id="couponStatus" aria-live="polite"></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
